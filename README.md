@@ -1,8 +1,3 @@
-Berikut adalah `README.md` yang cocok untuk project GitHub kamu berdasarkan isi dari `main.py` yang telah kamu berikan:
-
----
-
-````markdown
 # Minecraft Properties & YAML File Translator by Louis Bryan
 
 A graphical desktop application for translating Minecraft `.properties` and `.yaml` configuration files using [Argos Translate](https://www.argosopentech.com/). This tool supports multi-threaded translation with fine control over CPU usage and translation batching, optimized for handling formatting like Minecraft color codes and nested YAML structures.
@@ -24,8 +19,6 @@ A graphical desktop application for translating Minecraft `.properties` and `.ya
 - 📘 Helpful install guide and language management tools
 - 🗃️ Supports over 70+ languages (based on installed Argos Translate packages)
 
----
-
 ## 🧑‍💻 Installation
 
 1. **Clone the repository**
@@ -33,7 +26,7 @@ A graphical desktop application for translating Minecraft `.properties` and `.ya
 ```bash
 git clone https://github.com/yourusername/minecraft-translator-gui.git
 cd minecraft-translator-gui
-````
+```
 
 2. **Install dependencies**
 
@@ -136,6 +129,8 @@ argos-translate --install-package en ja  # English to Japanese
 
 Click `Refresh Languages` in the GUI after installing.
 
+---
+
 ## 📦 Packaging (Optional)
 
 To convert the app to `.exe` (Windows):
@@ -145,9 +140,13 @@ pip install pyinstaller
 pyinstaller main.py --noconsole --onefile
 ```
 
+---
+
 ## 📄 License
 
 MIT License
+
+---
 
 ## 👤 Author
 
@@ -155,8 +154,8 @@ MIT License
 
 > Minecraft enthusiast & AI student with a focus on language tech.
 
+---
+
 ## ⭐️ Star the repo if this helped your Minecraft translation workflow!
 
-
-Kalau kamu ingin, aku juga bisa buatin versi Bahasa Indonesia dari README ini. Mau?
-```
+---
