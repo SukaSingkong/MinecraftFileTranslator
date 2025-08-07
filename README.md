@@ -145,8 +145,7 @@ Lisensi: **MIT**
 ## 👤 Pengembang
 
 **Louis Bryan**
-Mahasiswa AI & Penggemar Minecraft
-Proyek open-source untuk mempermudah penerjemahan server Minecraft.
+- Mahasiswa Artificial Intelligence Bina Nusantara
 
 ---
 
