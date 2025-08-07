@@ -1,139 +1,133 @@
-# Minecraft Properties & YAML File Translator by Louis Bryan
+# Penerjemah File Properties & YAML Minecraft oleh Louis Bryan
 
-A graphical desktop application for translating Minecraft `.properties` and `.yaml` configuration files using [Argos Translate](https://www.argosopentech.com/). This tool supports multi-threaded translation with fine control over CPU usage and translation batching, optimized for handling formatting like Minecraft color codes and nested YAML structures.
+Aplikasi desktop dengan antarmuka grafis (GUI) untuk menerjemahkan file konfigurasi Minecraft berformat `.properties` dan `.yaml` menggunakan [Argos Translate](https://www.argosopentech.com/). Aplikasi ini mendukung penerjemahan multi-threaded dengan kontrol penggunaan CPU dan pengelompokan batch, serta dioptimalkan untuk menjaga format warna Minecraft dan struktur YAML kompleks.
 
 ---
 
-## ✨ Features
+## ✨ Fitur Utama
 
-- 🖼️ User-friendly GUI with file and language selection
-- 🔄 Auto-detect or manually select file type: `.properties` or `.yaml`
-- 🧠 Intelligent translation that preserves:
-  - Minecraft color codes (`&a`, `§c`, etc.)
-  - Placeholders (`%player%`, `{variable}`, `<tag>` etc.)
-- 🌐 Built-in support for [Argos Translate](https://www.argosopentech.com/)
-- 🧵 Multi-threaded translation with CPU usage control
-- 📦 Batch processing & adjustable delay between requests
-- 💾 Save/load translation settings for reuse
-- 📈 Real-time progress bar and logging output
-- 📘 Helpful install guide and language management tools
-- 🗃️ Supports over 70+ languages (based on installed Argos Translate packages)
+- 🖼️ Antarmuka GUI yang mudah digunakan
+- 🔍 Deteksi otomatis atau pilih tipe file secara manual (`.properties` atau `.yaml`)
+- 🎨 Menjaga format khusus seperti:
+  - Kode warna Minecraft (`&a`, `§c`, dll)
+  - Placeholder (`%player%`, `{nama}`, `<tag>`, dll)
+- 🌐 Terintegrasi dengan [Argos Translate](https://www.argosopentech.com/)
+- 🧵 Mendukung multi-threading dengan pengaturan penggunaan CPU
+- 📦 Penerjemahan dalam batch & penundaan antar permintaan yang dapat diatur
+- 💾 Simpan dan muat pengaturan penerjemahan
+- 📈 Tampilan progress bar dan log waktu nyata
+- 📘 Panduan instalasi bahasa & tombol refresh bahasa
+- 🌍 Mendukung lebih dari 70+ bahasa (berdasarkan paket yang diinstal)
 
-## 🧑‍💻 Installation
+---
 
-1. **Clone the repository**
+## 📦 Download Siap Pakai (.EXE)
+
+Tidak ingin repot install Python?
+
+➡️ Langsung download versi `.exe` siap pakai dari halaman **[Releases](https://github.com/SukaSingkong/MinecraftFileTranslator/releases/tag/Release)**
+
+**Langkah-langkah:**
+
+1. Kunjungi tab [Releases](https://github.com/SukaSingkong/MinecraftFileTranslator/releases/tag/Release)
+2. Download file bernama `v.X.X.X_Release.zip`
+3. Extract File dan Jalankan Langsung — tidak perlu Python atau setup tambahan
+4. (Opsional) Install bahasa di Argos Translate dan klik *Refresh Languages*
+
+---
+
+## 🧑‍💻 Instalasi Manual (opsional)
+
+Jika kamu ingin menjalankan dari kode sumber:
+
+1. **Clone repository ini**
 
 ```bash
-git clone https://github.com/yourusername/minecraft-translator-gui.git
+git clone https://github.com/usernameanda/minecraft-translator-gui.git
 cd minecraft-translator-gui
-```
+````
 
-2. **Install dependencies**
+2. **Install semua dependensi**
 
-Make sure you have Python 3.8 or higher installed.
+Pastikan Python 3.8 ke atas sudah terpasang.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Required packages:
-
-* `argostranslate`
-* `PyYAML`
-* `psutil`
-* `tqdm`
-
-Or install manually:
+Atau install manual:
 
 ```bash
 pip install argostranslate pyyaml psutil tqdm
 ```
 
-3. **Install Argos Translate Language Packages**
+3. **Pasang paket bahasa Argos Translate**
 
-Download and install translation packages (e.g., English → Indonesian):
+Contoh: untuk menerjemahkan dari Inggris ke Indonesia:
 
 ```bash
 argos-translate --install-package en id
 ```
 
-See available packages here: [Argos Packages Index](https://www.argosopentech.com/argospm/index/)
-
 ---
 
-## 🚀 Usage
+## 🚀 Cara Penggunaan
 
-Run the translator GUI:
+Jalankan aplikasi:
 
 ```bash
 python main.py
 ```
 
-Then:
+Atau klik `minecraft-translator.exe` jika menggunakan versi release.
 
-1. Choose a source `.properties` or `.yaml` file
-2. Select output path
-3. Select language pair (e.g., `en` → `id`)
-4. Adjust performance settings (optional)
-5. Click `Start Translation`
+Langkah-langkah:
 
-You can also save your settings as `.json` and reload them later.
-
----
-
-## 📷 Screenshots
-
-> *Add screenshots here of the GUI in use, before and after translation.*
+1. Pilih file `.properties` atau `.yaml` sumber
+2. Pilih lokasi untuk file hasil
+3. Pilih bahasa asal dan tujuan (contoh: `en` → `id`)
+4. Atur performa jika perlu
+5. Klik tombol **Start Translation**
 
 ---
 
-## 🧠 How It Works
+## 📂 Dukungan Tipe File
 
-* Properties and YAML files are parsed and traversed.
-* Translatable text is filtered out using smart patterns (ignores placeholders, formatting, etc.)
-* Translations are batched and sent using Argos Translate with optional multithreading.
-* Translations are cached to avoid redundant work.
-* YAML structure is preserved using custom loader/dumper logic.
-
----
-
-## 📂 File Support
-
-| File Type        | Support | Notes                                |
-| ---------------- | ------- | ------------------------------------ |
-| `.properties`    | ✅       | Java-based key-value config format   |
-| `.yaml` / `.yml` | ✅       | Supports nested structures and lists |
+| Tipe File        | Didukung | Catatan                                |
+| ---------------- | -------- | -------------------------------------- |
+| `.properties`    | ✅        | Format konfigurasi Minecraft klasik    |
+| `.yaml` / `.yml` | ✅        | Mendukung struktur bertingkat dan list |
 
 ---
 
-## 🛠 Advanced Settings
+## ⚙️ Pengaturan Lanjutan
 
-* **Batch Size**: Number of strings to translate at once
-* **Delay**: Seconds to wait between batches
-* **CPU Usage Mode**:
+* **Batch Size**: Jumlah teks yang diterjemahkan dalam satu waktu
+* **Delay**: Waktu jeda (detik) antar batch
+* **Mode Penggunaan CPU**:
 
-  * By percentage (e.g., 50% of all cores)
-  * Fixed thread count (e.g., 4 threads)
+  * Persentase (misal: gunakan 50% dari core CPU)
+  * Jumlah thread tetap (misal: 4 thread)
 
 ---
 
-## 💬 Language Support
+## 💬 Bahasa yang Didukung
 
-The app can display all Argos Translate-installed languages. If no language is installed, it shows fallback languages.
+Bahasa yang muncul tergantung pada paket bahasa yang telah diinstal melalui Argos Translate.
 
-To install more:
+Untuk memasang bahasa lain:
 
 ```bash
-argos-translate --install-package en ja  # English to Japanese
+argos-translate --install-package en ja  # Inggris ke Jepang
 ```
 
-Click `Refresh Languages` in the GUI after installing.
+Klik tombol **Refresh Languages** di dalam aplikasi setelah menginstal paket baru.
 
 ---
 
-## 📦 Packaging (Optional)
+## 📦 Packaging ke .exe (Pengembang)
 
-To convert the app to `.exe` (Windows):
+Untuk membuat versi `.exe` (Windows):
 
 ```bash
 pip install pyinstaller
@@ -142,20 +136,18 @@ pyinstaller main.py --noconsole --onefile
 
 ---
 
-## 📄 License
+## 📄 Lisensi
 
-MIT License
+Lisensi: **MIT**
 
 ---
 
-## 👤 Author
+## 👤 Pengembang
 
 **Louis Bryan**
-
-> Minecraft enthusiast & AI student with a focus on language tech.
-
----
-
-## ⭐️ Star the repo if this helped your Minecraft translation workflow!
+Mahasiswa AI & Penggemar Minecraft
+Proyek open-source untuk mempermudah penerjemahan server Minecraft.
 
 ---
+
+## ⭐ Beri bintang jika project ini bermanfaat bagi workflow server Minecraft-mu!
