@@ -145,7 +145,7 @@ Lisensi: **MIT**
 ## 👤 Pengembang
 
 **Louis Bryan**
-- Mahasiswa Artificial Intelligence Bina Nusantara
+Mahasiswa Artificial Intelligence Bina Nusantara
 
 ---
 
